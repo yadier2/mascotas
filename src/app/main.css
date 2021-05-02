@@ -1,0 +1,846 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+/* inicio  - bienvenido  */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+.container{
+    position: relative;
+    max-width: 100%;
+   min-height: 100vh;  
+    background-color: #FEC7D7;
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+.img_logo{
+    width: 31px;
+}
+.img_logoGrande{
+    width: 155px;
+}
+.bienvenido_container {
+    text-align: center;
+    padding: 10px;
+    width: 327px;
+    margin: auto;
+}
+.bienvenido_container >img{
+    max-width: 100%;
+    width: 327px;
+ }
+ .data-info-bienvenido> h2, p{
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #0E172C;
+}
+.data-info-bienvenido> p{
+    top: 33px;
+    max-width: 100%;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.005em;
+    color: #535353;
+}
+/* Button/Button */
+.btn_siguiente{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 16px;
+    width: 327px;
+    height: 48px;
+    background: #0E172C;
+    border-radius: 98px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFE;
+    max-width: 100%;
+    animation: oscurecer 1s;
+}
+/* navigation*/
+
+.navegation{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0px;
+    bottom: 0px;
+    background: #FFFFFE;
+    }
+.position{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: space-around;
+    }
+.nav_item{
+    display: flex;
+    background: #0E172C;
+    border-radius: 80px;
+    align-items: center;
+    padding:8px 16px 8px 16px;
+    color: #fff;
+    }
+    
+.nav_item p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #85D1CE;
+    padding: 0 5px 0 5px;
+    }
+.icono{
+    font-size: 25px;
+    
+    }
+    .navegation_home,
+    .navegation_favorites,
+    .navegation_mensajes,
+    .navegation_user{
+    text-align: center;
+    font-size: 25px;
+    
+    }   
+  .removeNav{
+    display: none;
+  }
+ /*page verHome menu mascotas*/
+  .nenuMascotas{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 15px;
+    padding-top: 15px;
+    /*  */
+    height: 70vh;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    }
+    .home_title{
+    margin-top:28px; 
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 33px;
+    color: #0E172C;
+    }
+    .info_categoria{
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    }
+    .info_categoria > p {
+      height: 25px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.0015em;
+      color: #0E172C;
+      }
+  .section_cardHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0px;
+        height: 80px;
+        width: 100%;
+      }
+      .sectionPerros,
+      .sectionGatos{
+        margin: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 8px;
+      width: 156px;
+      height: 80px;
+      background: #0E172C;
+      border-radius: 8px;
+      }
+      .sectionPerros:hover,
+      .sectionGatos:hover{
+        cursor: pointer;
+      }
+      .sectionPerros{
+        margin-right: 1px;
+      }
+      .sectionOpacity{
+        opacity: 0.5;
+      }
+    .sectionPerros .circuloFondo,
+    .sectionGatos .circuloFondo{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 64px;
+     height: 64px;
+     border-radius: 100%;
+     background-color: #85D1CE;
+     position: relative;
+   }
+   .sectionPerros img,
+   .sectionGatos img{
+   width: 40px;
+   left: 0%;
+   right: 0%;
+   top: 0%;
+   bottom: 0%; 
+   }
+   .sectionPerros p,
+   .sectionGatos p{
+     width: 49px;
+   height: 24px;
+   left: 88px;
+   top: 28px;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 24px;
+   letter-spacing: 0.005em;
+   color: #FFFFFE;
+   margin: 0;
+   }
+
+   /* CardPerros*/
+   @keyframes example {
+    0%{
+      transform: translate(0, 40px);
+    
+  } 
+  100%{
+    transform: translate(0, 0);
+  }
+   
+  }
+
+ .container_mascot{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    animation-name: example;
+    animation-duration: 2s;
+  }
+  .animation{
+    animation-name: example;
+    animation-duration: 2s;
+  }
+  .columna1,
+  .columna2{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  .columna2{
+    box-sizing: border-box;
+    padding: 24px 0px 0px;
+  }
+  .card_mascotass{
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 156px;
+  height: 250px;
+  margin: 10px 2px ;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  }
+  .info_name_perro{
+    width: 100%;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.42%, #000000 99.33%);
+    padding: 5px;
+    padding-top: 70px;
+  }
+   .text_perro_name{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  margin: 0;
+  padding-bottom: 0;
+  overflow: auto;
+  }
+   .text_perro_dos{
+    font-size: 18px;
+  margin: 0;
+  width: 100%;
+  color: #CDCDCD;
+  overflow: auto;
+  }
+
+  /* FORMULARIO USER*/
+.container_form{
+    padding:0 15px 0 15px;
+    text-align: start;
+    margin: 0;
+  }
+ 
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  .imgUserform{
+    width: 94px;
+      border-radius: 48px;
+  }
+  .cardUserform{
+    text-align: center;
+  }.cardUserform p{
+    padding-bottom: 0px;
+  }
+  input,
+  button,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .containerAuto{
+    height: 90vh;
+  }
+  .form-group {
+    margin: 0 auto 1.25rem auto;
+    
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+  .form-control:focus {
+   border-color: darkorange;
+    outline: 0;
+  }
+  .input-radio,
+  .input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+  }
+  .submit-button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--color-darkblue);
+      color: var( --color-white) ;
+      border-radius: 48px;
+      cursor: pointer;
+  }
+  .text-center {
+    text-align: center;
+  }
+  form {
+    border-radius: 0.25rem;
+  }
+
+@keyframes oscurecer{
+    0%{
+        opacity: 0;
+    } 
+    100%{
+      opacity: 1;
+    }
+}
+/* MASCOTA ID*/
+.btn_volver{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 24px;
+    top: 24px;
+    background: #0E172C;
+    border-radius: 100px;
+    }
+    .btn_volver i{
+    color: #fff;
+    font-size: 25px;
+    }
+
+   
+.img_id_mascota {
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+.img_id_mascota img{
+    width: 100%;
+    object-fit: cover;
+}
+.data_id_mascota {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 10;
+    position: absolute;
+    margin-top: -10px;
+    left: 0; 
+}
+.info_ubicacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .name_love {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .name_love .name {
+      display: flex;
+      height: 30px;
+    }
+    .name_love .name i {
+        margin-left: 20px;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 3px;
+    color: indigo;
+  }
+  .name_love .love {
+      font-size: 30px;
+      padding: 5px;
+      border: 1px solid #d9d5d562 ;
+    border-radius: 48px;
+    background: #fffafa;
+    box-shadow:  20px 20px 60px #d9d5d5,
+                 -20px -20px 60px #ffffff;
+                }
+                .info_ubicacion .name_edad {
+                    display: flex;
+    margin-top: 10px;
+}
+.favorite{
+color: red;
+border-radius: 50%;
+}
+  .info_ubicacion .name_edad p {
+      flex: 1;
+    text-align: start;
+}
+.info_ubicacion .ubicacion {
+    display: flex;
+    margin-top: 15px;
+  }
+  .info_ubicacion .ubicacion div {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+    .ubicacion_detail{
+        font-size: 16px;
+    text-align: start;
+}
+.info_personalidad {
+    margin-top: 15px;
+}
+.info_personalidad h2 {
+    margin-bottom: 20px;
+}
+.cards_personalidad {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+.cards_personalidad > div {
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 1px;
+    border:1px solid indigo;
+    text-align: center;
+  }
+  .cards_personalidad > div > img {
+    width: 40px;
+    height: 40px;
+}
+.cards_personalidad > div > p {
+    margin-top: 10px;
+    padding: 0;
+    font-size: 16px;
+}
+.info_history {
+    margin-top: 30px;
+}
+.info_history p {
+    margin-top: 10px;
+    text-align: start;
+    font-size: 16px;   
+}
+  .info_autor{
+      display: flex;
+      text-align: center;
+      width: 100%;
+      min-height: 60px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .info_autor .img_autor{
+        width: 48px;
+     height: 48px;
+     margin: auto;
+     border: 2px solid #85D1CE;
+     border-radius: 48px;
+    }
+    .info_autor .img_autor img{
+        width: 100%;
+        border-radius: 48px;
+    }
+    .info_autor .container_autor{
+        display: flex;
+    }
+  .container_autor p{
+      font-size: 14px;
+      padding: 0;
+      padding-left: 5px;   
+    }
+    .container_autor .name_autor{
+        font-size: 16;
+        font-weight: 400;
+    }
+    .btn_contacto{
+        display: flex;
+        align-items: center;
+    }
+    .btn_contacto button{
+    background: #0E172C;
+    width: 155px;
+    height: 48px;
+    border-radius: 48px;
+    text-align: center;
+    color: #FFFFFE;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .moveContent{
+    position: absolute;
+    top: 0; 
+    width: 100%;
+  }
+
+  /*view mensajes *********************** */
+  .containerMensajes{
+    position: absolute;
+    top: 0;
+    margin-top: 60px;
+    padding: 20px;
+
+  }
+  .title_mensajes{
+   text-align: start; 
+   margin-bottom: 20px;
+  }
+  .card_mensajeChat{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+height: 80px;
+background: #FFFFFE; 
+border-radius: 8px;
+}
+.container_chat{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+}
+
+.chat_foto{
+  width: 64px;
+  margin-right: 5px;
+}
+.chat_foto > img{
+  width: 100%;
+  border-radius: 48px;
+}
+.caja_text_chat{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+}
+.nombre_hora_chat{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  justify-content: space-between;
+}
+.nombre_hora_chat >h2{
+  padding: 0;
+  font-size: 16px;
+}
+  .nombre_hora_chat> p{
+    font-size: 14px;
+    padding: 0;
+  }
+.text_chat{
+height: 40px; 
+overflow: hidden;
+font-size: 14px;
+text-align: start;
+line-height: 19px;
+letter-spacing: 0.005em;
+}
+.ver_mensaje{
+  font-size: 25px;
+  padding-top: 15px;
+}
+  /* CHAT MENSAJES*/
+  .containerChat{
+    max-width: 700px;
+    margin: auto;
+    border-radius: 0px;
+background: #ec9999;
+box-shadow:  43px 43px 86px #868686,
+             -43px -43px 86px #ffffff;
+  min-height: 100vh;
+  }
+  .chatHeader{
+    background: #FFFFFE;
+    height: 144px;
+
+  }
+  .chatHeader > img{
+    margin-top: 20px;
+    width:64px;
+    border-radius: 48px;
+  }
+  
+  .mensajesContainer{
+    padding: 10px;
+    height: 60vh;
+    overflow-y: scroll;
+  }
+
+.mensajeChat{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+.hora{
+    padding-bottom: 0;
+    font-size: 15px;
+    font-weight: initial;
+}
+.message{
+    padding-bottom: 5px;
+    flex: 0.8;
+    font-size: 16px;
+    font-weight: inherit;
+} 
+.msgTu{
+    display: flex;
+    justify-content: flex-end;
+}
+.msgYo{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.msgTu p,
+.msgYo p{
+    background: #535353;
+    border-radius: 15px;
+    padding: 10px;
+   text-align: start;
+  max-width: 300px;
+    word-wrap: break-word;
+}
+.msgTu p{
+    background: #fff;
+}
+#formChat{
+display: flex;
+justify-content: space-around;
+}
+#formChat #textMensaje{
+    flex: 1;
+}
+#formChat input{
+ margin:10px
+}
+@media all and (min-width:580px) {  
+    /* inicio  - bienvenido  */
+    .bienvenido_container {
+        width: 560px;
+        text-align: center;
+        margin: auto;
+        padding: 0;
+    }
+    .bienvenido_container >img {
+        height: 300px;
+        width: 300px;
+    }
+   /*navigation nav*/
+   .navegation {
+    top: 0px;
+    padding: 2px;
+    height: fit-content;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+.removeNav{
+    display: initial;
+  }
+.position {
+    max-width: 800px;
+    margin: auto;
+    height: auto;
+}
+    /*menu Mascotas*/  
+  .nenuMascotas{
+    max-width: 1124px;
+      }
+      .home_title{
+        text-align: center;
+        margin-top: 50px;
+      }
+      .container_main{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding:0;
+        margin-top: 10px;
+      }
+      .info_categoria {
+        width: 150px;
+    }
+      .info_categoria p {
+        height: auto;
+        padding: 0;
+        text-align: unset;
+        border-bottom: 1px solid red;
+    }
+    .section_cardHome {
+        flex-direction: column;
+        justify-content: start;
+        height: 100%;
+}
+.sectionPerros, .sectionGatos {
+    margin-top: 20px;
+}
+.container_mascot {
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.columna1, .columna2 {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+}
+.columna2 {
+    padding: 0;
+    align-content: end;
+}
+
+/* MASCOTA ID*/
+.columnas {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 60px;
+}
+.btn_volver {
+    width: 40px;
+    height: 40px;
+    left: 2px;
+    top: 2px;
+}
+.columnas{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 60px;
+  }
+  .img_id_mascota{
+    border-top-left-radius: 15px;
+      flex:1.5;     
+      height: auto;
+    display: flex;
+  }
+  .data_id_mascota {
+      position: relative;   
+    flex:2; 
+  }   
+  .moveContent{
+    position: initial;
+  }
+/* Form user */
+  .container_form{
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      padding-top: 40px;
+      font-size: 16px;
+    }
+    .container_form div,
+    .container_form form {
+        flex: 1;
+        padding: 20px;
+    }
+    .form-group button{
+        background: #0e172c;
+        color: #fff;
+    }
+    .form-group{
+        padding: 0;
+        margin: 0;
+    }
+  .imgUserform {
+    margin-top: 40px;
+}
+.containerChat{
+  margin-top: 40px;
+}
+}
